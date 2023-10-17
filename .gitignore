@@ -3,7 +3,7 @@ dist
 static/assets
 static/email/test-emails
 admin-ui
-src/migration
+src/migrations
 .env
 *.sqlite*
 
