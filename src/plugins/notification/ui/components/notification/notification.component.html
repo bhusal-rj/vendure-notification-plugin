@@ -1,0 +1,20 @@
+<vdr-page-block>
+    
+    <div class="form-grid">
+        <form [formGroup]="notificationForm" (ngSubmit)="onSubmit()" >
+            <vdr-form-field label="Username Id" *ngIf="uri!='/all'">
+                <input formControlName="id" type="number" formControlName="id">
+            </vdr-form-field>
+            <vdr-form-field label="Notification Title" >
+                <input formControlName="title" type="text" formControlName="title"/>
+            </vdr-form-field>
+            <br />
+            <vdr-form-field label="Notification Message" >
+                <input formControlName="message" type="text" />
+            </vdr-form-field>
+            <br/>
+            <button class="button primary" type="submit" [disabled]="((notificationForm.invalid) || ((uri!='/all') && !(notificationForm.value.id)))">Send Notification</button>
+        
+        </form>
+    </div>
+</vdr-page-block>

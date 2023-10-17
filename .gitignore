@@ -1,0 +1,10 @@
+node_modules
+dist
+static/assets
+static/email/test-emails
+admin-ui
+src/migration
+.env
+*.sqlite*
+
+
